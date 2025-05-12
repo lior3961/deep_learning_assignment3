@@ -72,9 +72,7 @@ def visualize_hidden_layer(model, dataset):
 # Load and split MNIST dataset
 transform = transforms.ToTensor()
 train_dataset = torchvision.datasets.MNIST(root='./data', train=True, transform=transform, download=True)
-set_seed(1)
-# visualize_dataset(train_dataset)
+visualize_dataset(train_dataset)
 
 model = NeuralNet(input_size, hidden_size, num_classes)
-set_seed(1)
 visualize_hidden_layer(model, train_dataset)
